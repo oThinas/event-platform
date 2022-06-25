@@ -9,10 +9,11 @@ export function Cards(props: CardsProps) {
   if (props.isWallpaper) {
     return (
       <a href="#"
-        className="bg-gray-700 rounded overflow-hidden min-h-[8.375rem] flex justify-between items-stretch gap-6 hover:bg-gray-600 transition-colors"
+        className="bg-gray-700 rounded overflow-hidden min-h-[8.375rem] flex justify-between items-stretch gap-6 
+        hover:bg-gray-600 transition-colors"
       >
         <div className="flex gap-6">
-          <div className="bg-green-700 h-full p-6 flex items-center">
+          <div className="bg-green-700 h-full sm:p-6 flex items-center">
             <Image size={40} />
           </div>
           <div className="py-6 leading-relaxed">
@@ -24,18 +25,20 @@ export function Cards(props: CardsProps) {
             </p>
           </div>
         </div>
-        <div className="h-full p-6 flex items-center">
+        <div className="h-full pr-6 sm:p-6 flex items-center">
           <CaretRight size={24}/>
         </div>
       </a>
     )
   }
+
   return (
     <a href="#"
-      className="bg-gray-700 rounded overflow-hidden min-h-[8.375rem] flex justify-between items-stretch gap-6 hover:bg-gray-600 transition-colors"
+      className="bg-gray-700 rounded overflow-hidden min-h-[8.375rem] flex justify-between items-stretch gap-6 
+      hover:bg-gray-600 transition-colors"
     >
       <div className="flex gap-6">
-        <div className="bg-green-700 h-full p-6 flex items-center">
+        <div className="bg-green-700 h-full sm:p-6 flex items-center">
           <FileArrowDown size={40} />
         </div>
         <div className="py-6 leading-relaxed">
@@ -47,7 +50,7 @@ export function Cards(props: CardsProps) {
           </p>
         </div>
       </div>
-      <div className="h-full p-6 flex items-center">
+      <div className="h-full pr-6 sm:p-6 flex items-center">
         <CaretRight size={24}/>
       </div>
     </a>

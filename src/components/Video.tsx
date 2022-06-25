@@ -43,7 +43,7 @@ export function Video(props: VideoProps) {
   const { data } = useQuery<GetLessonBySlugResponse>(GET_LESSONS_BY_SLUG_QUERY, {
     variables: {
       slug: props.lessonSlug
-    }
+    }, fetchPolicy: 'no-cache'
   })
 
   if (!data) {
@@ -68,7 +68,7 @@ export function Video(props: VideoProps) {
         </div>
       </div>
       <div className="p-8 mx-auto">
-        <div className="flex items-start gap-16">
+        <div className="flex flex-col lg:flex-row items-start gap-16">
           <div className="flex-1">
             <h1 className="text-2xl font-bold">
               {data.lesson.title}
@@ -76,7 +76,7 @@ export function Video(props: VideoProps) {
             <p className="mt-4 text-gray-200 leading-relaxed">
               {data.lesson.description}
             </p>
-            <div className="flex items-center gap-4 mt-6">
+            <div className="flex justify-center lg:justify-start items-center gap-4 mt-6">
               <img 
                 src={data.lesson.teacher.avatarUrl} 
                 alt="Foto de perfil do professor." 
@@ -92,12 +92,12 @@ export function Video(props: VideoProps) {
               </div>
             </div>
           </div>
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col justify-center lg:w-fit w-full gap-4">
             <Button variant="primary" lessonSlug={props.lessonSlug} />
             <Button variant="secondary" lessonSlug={props.lessonSlug} />
           </div>
         </div>
-        <div className="gap-8 mt-20 grid grid-cols-2">
+        <div className="gap-8 mt-20 grid grid-cols-1 lg:grid-cols-2">
           <Cards />
           <Cards isWallpaper />
         </div>

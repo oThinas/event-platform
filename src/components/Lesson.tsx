@@ -8,6 +8,7 @@ interface LessonProps {
   slug: string;
   availableAt: Date;
   lessonType: 'live' | 'class';
+  closeMenu: () => void
 }
 
 export function Lesson(props: LessonProps) {
@@ -27,6 +28,7 @@ export function Lesson(props: LessonProps) {
         {availableDateFormatted}
       </time>
       <div
+        onClick={props.closeMenu}
         className={`relative rounded border border-gray-500 p-4 mt-2  transition-all group-hover:border-green-500 group-hover:border-opacity-70 
           ${isActiveLesson
               ? `bg-green-500 before:absolute before:content-[' '] before:w-4 before:h-4
@@ -38,8 +40,8 @@ export function Lesson(props: LessonProps) {
         `}
       >
         <Link 
-          to={`/event/lesson/${props.slug}`} 
-          className={`lesson-card 
+          to={`${isLessonAvaliable && `/event/lesson/${props.slug}`}`}
+          className={`lesson-card
             ${!isLessonAvaliable && 'pointer-events-none'}
           `}
         >

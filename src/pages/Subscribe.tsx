@@ -36,8 +36,10 @@ export function Subscribe() {
   
   return (
     <div className="min-h-screen bg-blur bg-cover bg-no-repeat flex flex-col items-center">
-      <div className="flex items-center justify-between mt-20 w-[75.9375rem]">
-        <div className="max-w-[40rem]">
+      <div 
+        className="flex flex-col gap-8 xl:flex-row items-center justify-between mt-20 xl:w-[75.9375rem]"
+      >
+        <div className="flex flex-col items-center xl:items-start max-w-[40rem] text-center sm:text-left p-6">
           <HeaderLogo />
           <h1 className="mt-8 text-[2.5rem] leading-tight">
             Construa uma <strong className="text-blue-500">aplicação completa</strong>, do zero, 
@@ -47,7 +49,7 @@ export function Subscribe() {
             Em apenas uma semana você vai dominar na prática uma das tecnologias mais utilizadas e com alta demanda para acessar as melhores oportunidades do mercado.
           </p>
         </div>
-        <div className="p-8 bg-gray-700 border border-gray-500 rounded">
+        <div className="p-8 bg-gray-700 border border-gray-500 rounded min-w-[22.5rem]">
           <h2 className="text-2xl block mb-6">
             Inscreva-se gratuitamente
           </h2>
@@ -84,10 +86,10 @@ export function Subscribe() {
         </div>
       </div>
       <img src={CodeImg} alt="Tela de desenvolvimento no Visual Studio Code" 
-        className="mt-10"
+        className="mt-10 h-auto w-auto"
       />
-      <footer className="border-t border-gray-500 bg-gray-900 flex justify-between p-6 text-gray-300 w-full">
-        <div className="flex items-center gap-6">
+      <footer className="border-t border-gray-500 bg-gray-900 flex flex-col md:flex-row justify-between items-center gap-6 p-6 text-gray-300 w-full">
+        <div className="flex flex-col md:flex-row items-center gap-6">
           <FooterLogo />
           <span>
             Rocketseat - Todos os direitos reservados
