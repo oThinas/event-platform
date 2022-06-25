@@ -67,7 +67,7 @@ export function Video(props: VideoProps) {
           </Player>
         </div>
       </div>
-      <div className="p-8 max-w[68.75rem] mx-auto">
+      <div className="p-8 mx-auto">
         <div className="flex items-start gap-16">
           <div className="flex-1">
             <h1 className="text-2xl font-bold">
@@ -93,8 +93,8 @@ export function Video(props: VideoProps) {
             </div>
           </div>
           <div className="flex flex-col gap-4">
-            <Button variant="primary" />
-            <Button variant="secondary" />
+            <Button variant="primary" lessonSlug={props.lessonSlug} />
+            <Button variant="secondary" lessonSlug={props.lessonSlug} />
           </div>
         </div>
         <div className="gap-8 mt-20 grid grid-cols-2">
@@ -102,19 +102,6 @@ export function Video(props: VideoProps) {
           <Cards isWallpaper />
         </div>
       </div>
-      <footer className="border-t border-gray-500 flex justify-between m-6 pt-6 text-gray-300">
-        <div className="flex items-center gap-6">
-          <FooterLogo />
-          <span>
-            Rocketseat - Todos os direitos reservados
-          </span>
-        </div>
-        <div>
-          <a href="#">
-            Políticas de privacidade
-          </a>
-        </div>
-      </footer>
     </div>
   )
 }

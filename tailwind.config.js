@@ -4,11 +4,14 @@ module.exports = {
     './src/**/*.tsx' //Qualquer arquivo de src que terminar com .tsx, utilizará o tailwind
   ],
   theme: {
+    backgroundImage: {
+      blur: 'url(/src/assets/blur-background.png)',
+      icon: 'url(/src/assets/reactjs-icon.png)'
+    },
     extend: {
       fontFamily: {
         sans: 'Roboto, sans-serif'
       },
-      
       colors: {
         green: {
           300: '#00B37E',
