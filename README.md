@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-  <img src="https://github.com/oThinas/event-platform/blob/master/.github/1.png" alt="Logo do Ignite Lab" width="200px">
+  <img src="https://github.com/oThinas/event-platform/blob/master/.github/1.png" alt="Home da aplicação">
 </p>
 
 ## 📷 Galeria
