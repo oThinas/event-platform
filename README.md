@@ -33,7 +33,7 @@ Esse projeto foi desenvolvido com:
   
 Para contribuir, clone o projeto e acesse a pasta:
 ```bash
-$ git clone https://github.com/oThinas/event-platform
+$ git clone https://github.com/oThinas/event-platform.git
 $ cd event-platform
 ```
   
